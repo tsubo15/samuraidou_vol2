@@ -3,8 +3,8 @@ body {
     font-family: 'Yu Gothic UI','ヒラギノ角ゴシック','Hiragino Sans','MS UI Gothic',sans-serif;
 }
 
-p {
-    font-size: 15px;
+p, span {
+    font-size: 12px;
 }
 
 /* ======================
@@ -21,11 +21,14 @@ body {
 
 /* 共通スタイル */
 h2 {
-    background-color: #006633;
+    background-color: #30473c;
     color: #ffffff;
-    height: 36px;
+    height: 50px;
+    line-height: 50px;
     margin-top: 0;
-    padding: 5px 0 0 375px;
+    margin-bottom: 40px;
+    font-size: 16px;
+    padding-left: 335px;
 }
 
 /* ヘッダー、ナビ */
@@ -37,21 +40,27 @@ header {
     }
 
     .nav-pc {
-        background-color: #d8e698;
-        width: 280px;
-        height: 485px;
-        margin: 162px 40px 49px 49px;
+        background-color: #c7d294;
+        width: 210px;
+        height: 330px;
+        margin: 45px 0px 0px 45px;
         position: relative;
         position: fixed;
         z-index: 5000;
     }
+        .nav-pc > div {
+            width: 100%;
+            height: 36px;
+            /* background-color: #30473c; */
+        }
             .logo-pc > img {
-                width: 280px;
+                height: 50px;
+                margin-left: 10px;
             }
         .nav-pc > nav {
             display: flex;
             flex-direction: column;
-            margin: 20px 0 0 36px;
+            margin: 25px 0 0 30px;
         }
             .nav-pc-a {
                 margin: 0 0 18px 0;
@@ -70,7 +79,7 @@ header {
                     color: #001f10;
                 }
         .header-sns {
-            background-color: #006633;
+            background-color: #30473c;
             width: 100%;
             height: 36px;
             position: absolute;
@@ -83,7 +92,7 @@ header {
                 margin-right: 5px;
             }
             .header-sns > a:hover {
-                font-size: 25px;
+                margin-top: 3px;
             }
 
 /* キャッチコピー */
@@ -94,17 +103,19 @@ header {
     position: relative;
 }
     .top-image {
-        background-repeat: no-repeat;
-        background-position: right top;
-        background-size: cover;
+        margin-bottom: -4px;
+    }
+    .top-image > img {
+        /* background-repeat: no-repeat;
+        background-position: right top; */
         width: 100%;
-        height: 611px;    
+        max-height: 630px;    
     }
     .catchcopy {
         position: absolute;
         bottom: 40px;
         right: 0;
-        width: 60%;
+        width: 40%;
     }
 
 /* おしらせ */
@@ -113,17 +124,18 @@ header {
 }
     .info-div {
         position: relative;
-        padding: 0 0 30px 335px;
+        padding: 0 0 0px 335px;
         overflow-y: scroll;
-        width: 700px;
+        width: 65%;
         height: 150px;
-        margin: 0 auto 35px auto;
+        margin: 0 20px 75px 0;
     }
 
         .info-dt {
             display: flex;
             margin-bottom: 5px;
             float: left;
+            font-size: 12px;
         }
             .info-dt > span {
                 /* background-color: rgb(232, 244, 225); */
@@ -140,6 +152,7 @@ header {
             .info-a {
                 margin-left: 30px;
                 text-decoration: none;
+                font-size: 12px;
             }
                 .info-a:link {
                     color: black;
@@ -153,7 +166,7 @@ header {
                     color: black;
                 }
                 .info-a:active {
-                    font-size: 15px;
+                    font-size: 12px;
                 }
 
             /* newのタグをつける */
@@ -166,6 +179,7 @@ header {
             .info-a-new {
                 margin-left: 30px;
                 text-decoration: none;
+                font-size: 12px;
             }
                 .info-a-new:link {
                     color: black;
@@ -179,7 +193,7 @@ header {
                     color: black;
                 }
                 .info-a-new:active {
-                    font-size: 15px;
+                    font-size: 12px;
                 }
                 .info-a-new::after {
                     content: "new!";
@@ -201,18 +215,17 @@ header {
 
             /* こだわり　文章 */
             .kodawari-div1 > h3 {
-                font-size: 25px;
+                font-size: 16px;
                 text-shadow: 4px 2px 4px gray;
-                margin-left: 375px;
-                border-bottom: solid 4px #d8e698;
+                margin: 0 0 0 360px;
+                border-bottom: solid 4px #c7d294;
                 padding-bottom: 8px;
                 width: 320px;
             }
             .kodawari-div1 > p {
-                font-size: 18px;
-                width: 800px;
-                margin-left: 365px;
-                padding: 30px;
+                font-size: 14px;
+                width: 100%;
+                margin: 30px 0 30px 365px;
                 background-color: rgba(255, 255, 255, 0.6);
             }
             .kodawari-p-sp {
@@ -223,7 +236,7 @@ header {
             .kodawari-img {
                 width: 70%;
                 height: 300px;
-                margin: 0 10px 30px 375px;
+                margin: 0 20px 30px 375px;
                 object-fit: cover;
                 object-position: right bottom;
                     }
@@ -231,16 +244,22 @@ header {
 /* 商品紹介 */
 .product {
     width: 100%;
+    margin-bottom: 75px;
 }
+    .product-flex {
+        margin: 0;
+    }
     .product-flex > ul {
         display: flex;
+        justify-content: space-between;
         flex-wrap: wrap;
-        width: 70%;
         margin-left: 335px;
+        margin-right: 20px;
+        padding-left: 0;
     }
         .product-flex > ul > li {
-            width: calc(33.3333% - 20px);
-            padding: 0 10px 12px 0;
+            width: calc(33.3333% - 10px);
+            padding-bottom: 5px;
             list-style-type: none;
         }
         .product-flex > ul > li > a {
@@ -259,22 +278,21 @@ header {
             }
 
             .product-flex > ul > li > a > img {
-                width: 250px;
-                margin-top: 20px;
+                width: 100%;
             }
             .product-flex > ul > li > a > p {
-                font-size: 17px;
+                font-size: 14px;
                 margin: 2px 0 2px 0;
             }
             .product-span1 {
-                font-size: 15px;
+                font-size: 14px;
                 display: block;
                 margin: 0 0 20px 0;
             }
             
             /* newをつける */
             .puroduct-new {
-                font-size: 15px;
+                font-size: 11px;
                 margin: 2px 0 2px 0;
             }
                 .puroduct-new::after {
@@ -284,8 +302,11 @@ header {
                 }
     .motto-botton {
         margin-left: 375px;
-        width: 80px;
-        background-color: #006633;
+        width: 90px;
+        height: 40px;
+        background-color: #30473c;
+        border-radius: 10px;
+        margin: 0 20px 0 auto;
     }
         .motto-botton > a {
             text-decoration: none;
@@ -302,23 +323,22 @@ header {
             .motto-botton > a > h4 {
                 color: #ffffff;
                 text-align: center;
-                padding: 5px 0;
+                line-height: 40px;
             }
 
 /* お問い合わせ */
 .contact {
-    margin: 60px auto;
+    margin: 0 0 75px 0;
     width: 100%;
 }
     .contact > form {
-        margin-top: 60px;
-        margin-left: 375px;
+        margin-left: 335px;
     }
         .contact > form > div {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            padding-bottom: 30px;
+            padding-bottom: 10px;
         }
         
         /* 項目 */
@@ -326,6 +346,7 @@ header {
                 width: 240px;
                 display: flex;
                 align-items: center;
+                font-size: 14px;
             }
                 .contact-label {
                     font-weight: bold;
@@ -336,6 +357,20 @@ header {
                     font-weight: bold;
                 }
             
+            .contact-heading-textarea {
+                width: 240px;
+                display: flex;
+                font-size: 14px;
+            }
+                .contact-label {
+                    font-weight: bold;
+                }
+                .contact-span {
+                    color: red;
+                    margin-left: 20px;
+                    font-weight: bold;
+            }
+            
         /* テキストボックス */
             .contact-textbox {
                 border-top: 0;
@@ -344,7 +379,7 @@ header {
                 border-bottom-width: 1px;
                 border-bottom-color: #001f10;
                 border-bottom-style: solid;
-                background-color: #fafafa;
+                background-color: #f8fff9;
                 width: 400px;
                 height: 56px;
             }
@@ -355,9 +390,9 @@ header {
                 border-bottom-width: 1px;
                 border-bottom-color: #001f10;
                 border-bottom-style: solid;
-                background-color: #fafafa;
+                background-color: #f8fff9;
                 width: 400px;
-                height: 200px;            
+                height: 120px;            
             }
         .submit-div {
             /* display: flex;
@@ -374,7 +409,7 @@ header {
 
 /* フッター */
 footer {
-    background-color: #006633;
+    background-color: #30473c;
     text-align: center;
     padding: 40px 0;
     width: 100vw;
@@ -382,7 +417,7 @@ footer {
 
     .footer-flex {
         display: flex;
-        align-items: baseline;
+        align-items: center;
         margin-bottom: 30px;
     }
         .footer-logo {
@@ -406,6 +441,9 @@ footer {
             .footer-a:active {
                 color: white;
             }
+    .footer-div {
+        font-size: 12px;
+    }
 
     .footer-sns {
         text-align: left;
@@ -417,6 +455,7 @@ footer {
         color: white;
         float: right;
         padding-right: 40px;
+        font-size: 11px;
     }
 
 }
@@ -474,7 +513,7 @@ body {
         text-decoration: none;
         padding-bottom: 10px;
         margin-left: 30px;
-        font-size: 18px;
+        font-size: 12px;
     }
         .menu:link {
             color: #001f10;
@@ -501,7 +540,7 @@ body {
             margin-right: 5px; */
         }
         .sns-sp > a:hover {
-            font-size: 25px;
+            margin-top: 2px;
         }
 
 /* 共通スタイル */
@@ -582,7 +621,7 @@ h2 {
                     color: black;
                 }
                 .info-a:active {
-                    font-size: 15px;
+                    font-size: 12px;
                 }
 
             /* newのタグをつける */
@@ -602,7 +641,7 @@ h2 {
                     color: black;
                 }
                 .info-a-new:active {
-                    font-size: 15px;
+                    font-size: 12px;
                 }
             .info-dt-new > span {
                 background-color: rgba(110, 0, 26, 0.5);
@@ -656,7 +695,7 @@ h2 {
 
             /* こだわり　文章 */
             .kodawari-div1 > h3 {
-                font-size: 20px;
+                font-size: 14px;
                 text-shadow: 4px 2px 4px gray;
                 margin: 0 0 20px 30px;
                 border-bottom: solid 4px #d8e698;
@@ -667,7 +706,7 @@ h2 {
                 display: none;
             }
             .kodawari-p-sp {
-                font-size: 15px;
+                font-size: 12px;
                 margin-left: 30px;
                 background-color: rgba(255, 255, 255, 0.6);
             }
@@ -720,18 +759,18 @@ h2 {
                     /* margin-top: 20px; */
                 }
                 .product-flex > ul > li > a > p {
-                    font-size: 15px;
+                    font-size: 12px;
                     margin: 2px 0 2px 0;
                 }
                 .product-span1 {
-                    font-size: 13px;
+                    font-size: 12px;
                     display: block;
                     margin: 0 0 20px 0;
                 }
                 
                 /* newをつける */
                 .puroduct-new {
-                    font-size: 13px;
+                    font-size: 12px;
                     margin: 2px 0 2px 0;
                 }
                     .puroduct-new::after {
